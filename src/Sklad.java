@@ -13,6 +13,16 @@ public class Sklad {
 
     }
 
+    private String status(){
+        if (tovari.isEmpty())
+        {
+            return "Склад пустой";
+        }
+        else {
+             return "Склад не пустой";
+        }
+    }
+
     public void addTovar(Tovar product) {
         for (Tovar t : tovari) {
             if (t.getName().equals(product.getName())) {
